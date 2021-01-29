@@ -1,0 +1,102 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <title>Hockey Score Leadbord</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="hockey.html">
+    <link rel="stylesheet" href="hockey.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code|Ubuntu+Mono|VT323&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <script src="hockey.js"></script>
+
+    <div class="entire"> 
+        <div class="left">
+            <h1>HOME</h1>
+            <div class="score">
+                <p id="homes">0</p>
+                <button onclick="add()"  type="button">ADD</button>
+                <button onclick="sub()"  type="button">SUB</button>
+
+                <input name="putthetext" type="text" id="players"  placeholder="Type Player Name">
+                <button onclick="player()" type="button">Update</button>
+
+            </div>
+            <div>
+                <h2>Penalty List</h2>
+
+            </div>
+            <div id="pa">
+            </div>
+            <button class="clearshot" onclick="clearhomep()" type="button">Clear List</button>
+
+        </div>
+        <div class="right">
+            <h1>GUEST</h1>
+            <div class="score">
+                <p id="guests">0</p>
+                <button onclick="addg()"  type="button">ADD</button>
+                <button onclick="subg()"  type="button">SUB</button>
+
+                <input name="putthetext" type="text" id="newg"  placeholder="Type Player Name">
+                <button onclick="guestp()" type="button">Update</button>
+
+            </div>
+            <div>
+                <h2>Penalty List</h2>
+
+            </div>
+            <div id="hp">
+            </div>
+            <button class="clearshot" onclick="clearguestp()" type="button">Clear List</button>
+
+        </div>
+       
+
+
+    </div>
+    <h1 class="shotsh1">SHOTS</h1>
+
+    <div class="shots">
+        <div class="shotleft">
+            <p id="shoth">0</p>
+            <button onclick="addsh()"  type="button">ADD</button>
+            <button onclick="subsh()"  type="button">SUB</button>
+        </div>
+        <div class="shotright">
+            <p id="shotg">0</p>
+            <button onclick="addsg()"  type="button">ADD</button>
+            <button onclick="subsg()"  type="button">SUB</button>
+        </div>
+
+        
+    </div>
+    <button class="clearshot" onclick="clearshot()" type="button">Next Period</button>
+
+
+    <div class="pp">
+        <div class="row">
+            <p class="periodback">Period:</p>
+            <p id="period">1</p>
+        </div>
+        <div class="next">
+            <button onclick="Padd()" type="button">+1</button>
+            <button onclick="Psub()" type="button">-1</button>
+        </div>
+       
+    </div>
+    
+    
+
+   
+    <button class= "clearall "onclick="clearScore()" type="button">ClearAll</button>
+
+    
+
+</body>
+</html>
