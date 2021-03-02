@@ -26,37 +26,30 @@ myName[2] = 'Jocker' ;
 myName[3] = 'IT' ;
 myName[4] = 'Cloudy with a Chance of Meatballs' ;
 myName[5] = 'Busanhaeng ' ;
+
 for(i=0; i<6; i++)
 {
     var idName='.d'+i;
     var nameName='#p'+i;
-
-
     document.querySelector(idName).innerHTML = '<img src="'+myImage[i]+'">';
     document.querySelector(nameName).innerHTML = myName[i];
-
 }
 
 function add()
 {
-    
     var link=document.getElementById("link").value
     var title=document.getElementById("title").value
-    
     myImage.pop();
     myName.pop();
     myImage.unshift(link);
     myName.unshift(title);
     for(i=0; i<6; i++)
-{
-    var idName='.d'+i;
-    var nameName='#p'+i;
-
-
-    document.querySelector(idName).innerHTML = '<img src="'+myImage[i]+'">';
-    document.querySelector(nameName).innerHTML = myName[i];
-
-}
+    {
+        var idName='.d'+i;
+        var nameName='#p'+i;
+        document.querySelector(idName).innerHTML = '<img src="'+myImage[i]+'">';
+        document.querySelector(nameName).innerHTML = myName[i];
+    }
 }
 
 // document.querySelector('.d0').innerHTML = '<img src="'+myImage[0]+'">';
