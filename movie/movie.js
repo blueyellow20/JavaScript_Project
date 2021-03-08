@@ -50,6 +50,7 @@ function add()
         document.querySelector(idName).innerHTML = '<img src="'+myImage[i]+'">';
         document.querySelector(nameName).innerHTML = myName[i];
     }
+    
 }
 
 // document.querySelector('.d0').innerHTML = '<img src="'+myImage[0]+'">';
