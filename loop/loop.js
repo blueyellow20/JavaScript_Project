@@ -48,8 +48,8 @@ for(var i=0; i< 7 ; i++){
 
 document.write(`<br>Q7: <br>`)
 
-for(var z=0; z<5 ; z++){
-    for(var i=z; i< 7 ; i++){ 
+for(var z=0; z<6 ; z++){
+    for(var i=0; i< z ; i++){ 
         for(var j=0; j< i+1 ; j++){
           document.write(`🦴`);
         }
