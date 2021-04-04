@@ -1,0 +1,121 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <title>Howlester Fortress serial killings(Horror game)</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="game.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code|Ubuntu+Mono|VT323&display=swap" rel="stylesheet">
+    <audio id="audio" controls autoplay>
+        <source  src="bgm.mp3" type="audio/ogg">
+        
+    </audio>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+    </style>
+</head>
+<body>
+    <h1>Howlester Fortress serial killings</h1>
+    <div class="playBox" id="playBox">
+        <div class="first" id="storyOne" style="width: 750px; height:50px; z-index:2; position:absolute; font-size: 20px; margin-left: 25px; margin-top: 20px; color:white; font-family: 'New Tegomin', serif; text-align: center;"> A series of murders is taking place near Howlester Fortress, a small castle in Europe. More than 10 people have already been missing and six have been found dead. Local guard Stuart Kynastone has launched an investigation. During the investigation Kynaston found a suspicious figure and was attacked when he chased the figure. <br><div class="saveKy">Save Kynastone and find the criminal!</div><br> "Hint: Only one path is correct."</div>
+        <div class="invisible" id="storyTwo" style="width:600px; height:230px; z-index:2; position:absolute;"></div>
+        <div class="invisible" id="story3" style="width:600px; height:230px; z-index:2; position:absolute;"></div>
+        <div class="invisible" id="story4" style="color:white; font-family: 'New Tegomin', serif; text-align: center; margin-top:270px; z-index:2; position:absolute;">Where am I?</div>
+        <div  id="story5">
+            <div class="invisible" id="story5-1" style="width:200px; height:400px; z-index:2; position:relative;"></div>
+            <div class="invisible" id="story5-2" style="width:200px; height:230px; z-index:2; position:relative;"></div>
+            <div class="invisible" id="story5-3" style="width:200px; height:230px; z-index:2; position:relative;"></div>
+            <div class="invisible" id="story5-4" style="width:200px; height:230px; z-index:2; position:relative;"></div>
+            <div class="invisible" id="story5-5" style="width:200px; height:230px; z-index:2; position:relative;"></div>
+            <div class="invisible" id="openedDoor" style="width:200px; height:430px; z-index:2; position:relative;"></div>
+        </div>
+        <div class="invisible" id="story6" style="color:white; font-family: 'New Tegomin', serif; text-align: center; margin-top:270px; z-index:2; position:absolute;">The Door is locked. Type the asnwer of question in the chest</div>
+        <div id="week">
+            <button class="invisible" id="mon" onclick="mon()" style=" font-family: 'New Tegomin', serif; text-align: center; margin-top:300px; z-index:2; position:relative;" type="button">Mon</button>
+            <button class="invisible" id="tue" onclick="mon()" style=" font-family: 'New Tegomin', serif; text-align: center; margin-top:300px; z-index:2; position:relative;" type="button">Tue</button>
+            <button class="invisible" id="wen" onclick="mon()" style=" font-family: 'New Tegomin', serif; text-align: center; margin-top:300px; z-index:2; position:relative;" type="button">Wen</button>
+            <button class="invisible" id="thr" onclick="mon()" style=" font-family: 'New Tegomin', serif; text-align: center; margin-top:300px; z-index:2; position:relative;" type="button">Thr</button>
+            <button class="invisible" id="fri" onclick="mon()" style=" font-family: 'New Tegomin', serif; text-align: center; margin-top:300px; z-index:2; position:relative;" type="button">Fri</button>
+            <button class="invisible" id="sat" onclick="mon()" style=" font-family: 'New Tegomin', serif; text-align: center; margin-top:300px; z-index:2; position:relative;" type="button">Sat</button>
+            <button class="invisible" id="sun" onclick="sun()" style=" font-family: 'New Tegomin', serif; text-align: center; margin-top:300px; z-index:2; position:relative;" type="button">Sun</button>
+        </div> 
+        <div class="invisible" id="story8" style="color:white; font-family: 'New Tegomin', serif; text-align: center; margin-top:270px; z-index:2; position:absolute;">The chest is locked. Solve the qiz on the paper</div>
+        <input class="invisible" id="answer2" type="text" style="color:black; font-family: 'New Tegomin', serif; text-align: center; margin-top:300px; z-index:2; position:absolute;">
+        <button class="invisible" id="open2" onclick="open2()" style=" font-family: 'New Tegomin', serif; text-align: center; margin-left: 470px;margin-top:300px; z-index:2; position:absolute;" type="button">Open</button>
+        <div class="invisible" id="quiz1" style="width:600px; height:230px; z-index:2; position:absolute;"></div>
+        <div class="invisible" id="quiz1-1" style="color:white; font-family: 'New Tegomin', serif; font-size: 40px; margin-top:270px; z-index:2; position:absolute;">What is the number under the car?</div>
+        <div class="invisible" id="quiz2" style="color:rgb(148, 22, 22); font-family: 'New Tegomin', serif; font-size: 40px;text-align: center; margin-top:40px;width:600px; height:230px; z-index:2; position:absolute;">What day is today?<br> I hope yesterday is tomorrow then today will be friday. </div>
+        <div class="invisible" id="hallway" style="width:600px; height:270px; z-index:2; position:absolute;"></div>
+        <div class="invisible" id="busHint" style="width:600px; height:230px; z-index:2; position:absolute;"></div>
+        <div class="invisible" id="busHintq" style="color:white; font-family: 'New Tegomin', serif; font-size: 40px; margin-top:270px; z-index:2; position:absolute;">Which direction the bus will go?</div>
+        <div class="invisible" id="dead" style="width:600px; height:230px; z-index:2; position:absolute;"></div>
+        <div class="invisible" id="welcome" style="width:600px; height:230px; z-index:2; position:absolute;"></div>
+        <div class="invisible" id="lastDoor" style="width:600px; height:230px; z-index:2; position:absolute;"></div>
+        <div class="invisible" id="win" style="width:600px; height:230px; z-index:2; position:absolute;"></div>
+        <div  id="threeDoor">
+            <div class="invisible" id="red" style="width:200px; height:300px; z-index:2; position:relative;"></div>
+            <div class="invisible" id="blue" style="width:200px; height:300px; z-index:2; position:relative;"></div>
+            <div class="invisible" id="green" style="width:200px; height:300px; z-index:2; position:relative;"></div>
+        </div>
+        <div class="invisible" id="gameOver" style="width:600px; height:230px; z-index:2; position:absolute;"></div>
+        <div class="invisible" id="gameOverText" style="color:rgb(212, 0, 0); font-family: 'New Tegomin', serif; text-align: center; margin-top:270px; z-index:2; position:absolute;">Game Over</div>
+
+    </div>
+   
+   
+   
+   
+   
+    <div class="buttons">
+        <button class="invisible" onclick="next()"  type="button" id="next">Wake him up</button>
+        <button class="invisible" onclick="look()"  type="button" id="look">Look Around</button>
+        <button class="invisible" onclick="goDoor()"  type="button" id="go">Go!</button>
+        <button class="invisible" onclick="nextB()"  type="button" id="nextB">Next</button>
+        <button class="invisible" onclick="again()"  type="button" id="again">Again</button>
+        <button class="invisible" onclick="home()"  type="button" id="home">Retry!</button>
+        <div id="deadRoom">
+
+            <button class="invisible" onclick="closer()"  type="button" id="closer">Look closer</button>
+            <button class="invisible" onclick="ignore()"  type="button" id="ignore">Ignore</button>
+        </div>
+        <div id="room">
+            <button class="invisible" onclick="door()"  type="button" id="door">Door</button>
+            <button class="invisible" onclick="chest()"  type="button" id="safe">Chest</button>
+            <button class="invisible" onclick="paper()"  type="button" id="paper">Paper</button>
+            <button  class="invisible" onclick="note()"  type="button" id="note">note</button>
+        </div>
+        <div id="leftright">
+            <button class="invisible" onclick="left()"  type="button" id="left">Left</button>
+            <button class="invisible" onclick="right()"  type="button" id="right">Right</button>
+            <button class="invisible" onclick="hint()"  type="button" id="hint">Hint</button>
+           
+        </div>
+
+        <div id="threeDoorB">
+            <button class="invisible" onclick="red()"  type="button" id="redB">Red</button>
+            <button class="invisible" onclick="blue()"  type="button" id="blueB">Blue</button>
+            <button class="invisible" onclick="green()"  type="button" id="greenB">Green</button>
+           
+        </div>
+
+        <div id="inOut">
+            <button class="invisible" onclick="in1()"  type="button" id="in1">Investigate More</button>
+            <button class="invisible" onclick="out1()"  type="button" id="out1">Leave</button>
+           
+        </div>
+    </div>
+    <div class="startButton">
+        <button onclick="start()"  type="button" class="start">START</button>
+
+    </div>
+
+    <script src="game.js"></script>
+
+    
+
+</body>
+</html>
+
