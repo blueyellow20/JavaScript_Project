@@ -204,6 +204,20 @@ function left(){
 
 }
 
+function right(){
+   document.querySelector("#busHint").classList.remove("visible")
+   document.querySelector("#busHintq").classList.remove("visible")
+   document.querySelector("#hallway").classList.remove("visible")
+   document.querySelector("#left").classList.remove("visible")
+   document.querySelector("#right").classList.remove("visible")
+   document.querySelector("#hint").classList.remove("visible")
+
+   document.querySelector("#gameOver").classList.add("visible")
+   document.querySelector("#gameOverText").classList.add("visible")
+   document.querySelector("#home").classList.add("visible")
+
+}
+
 function closer(){
 
 }
@@ -222,9 +236,7 @@ function ignore(){
    document.querySelector("#greenB").classList.add("visible")
 }
 
-function right(){
 
-}
 
 function hint(){
    document.querySelector("#busHint").classList.toggle("visible")
