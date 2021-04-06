@@ -1,14 +1,28 @@
+var bgm = new Audio("bgm.mp3");
+bgm.play();
 
+var scream = new Audio("./sound/maleScream.wav");
+var safe = new Audio("./sound/chest.wav")
+var crumple = new Audio("./sound/crumple.wav");
+var doorS = new Audio("./sound/door.wav");
+var winG = new Audio("./sound/win.wav")
+var loseG= new Audio("./sound/lose.wav");
 function start() {
     
     
     document.querySelector(".start").classList.add("invisible")
     document.querySelector("#storyOne").classList.add("invisible")
     document.querySelector("#storyTwo").classList.add("visible")
-    document.querySelector("#next").classList.add("visible")
 
-    var vid = document.getElementById("audio");
-    vid.pause();
+
+    bgm.pause();
+    setTimeout(function(){ 
+       scream.play(); 
+       document.querySelector("#next").classList.add("visible")
+      }, 1700);
+
+
+
     
     
  }
@@ -19,6 +33,7 @@ function start() {
     document.querySelector("#story3").classList.add("visible")
     document.querySelector("#story4").classList.add("visible")
     document.querySelector("#look").classList.add("visible")
+    scream.pause()
 
  }
  function look(){
@@ -31,6 +46,9 @@ function start() {
     document.querySelector("#door").classList.add("visible")
     document.querySelector("#safe").classList.add("visible")
     document.querySelector("#paper").classList.add("visible")
+    document.querySelector("#getOut").classList.add("visible")
+    document.querySelector("#hintOut").classList.add("visible")
+
  }
 
  function door(){
@@ -40,6 +58,8 @@ function start() {
    document.querySelector("#open2").classList.remove("visible")
    document.querySelector("#quiz1").classList.remove("visible")
    document.querySelector("#quiz1-1").classList.remove("visible")
+   document.querySelector("#getOut").classList.remove("visible")
+   document.querySelector("#hintOut").classList.remove("visible")
 
    document.querySelector("#mon").classList.add("visible")
    document.querySelector("#tue").classList.add("visible")
@@ -51,6 +71,8 @@ function start() {
 
    document.querySelector("#quiz2").classList.remove("visible")
 
+   doorS.play();
+
 
  }
 
@@ -61,6 +83,9 @@ function start() {
    document.querySelector("#open2").classList.add("visible")
    document.querySelector("#quiz1").classList.remove("visible")
    document.querySelector("#quiz1-1").classList.remove("visible")
+   document.querySelector("#getOut").classList.remove("visible")
+   document.querySelector("#hintOut").classList.remove("visible")
+
 
    document.querySelector("#mon").classList.remove("visible")
    document.querySelector("#tue").classList.remove("visible")
@@ -69,10 +94,11 @@ function start() {
    document.querySelector("#fri").classList.remove("visible")
    document.querySelector("#sat").classList.remove("visible")
    document.querySelector("#sun").classList.remove("visible")
-   
+   safe.play();
  }
 
  function paper(){
+   document.querySelector("#getOut").classList.remove("visible")
    document.querySelector("#story6").classList.remove("visible")
    document.querySelector("#story8").classList.remove("visible")
    document.querySelector("#answer2").classList.remove("visible")
@@ -87,8 +113,9 @@ function start() {
    document.querySelector("#fri").classList.remove("visible")
    document.querySelector("#sat").classList.remove("visible")
    document.querySelector("#sun").classList.remove("visible")
-   
-   
+   document.querySelector("#hintOut").classList.remove("visible")
+
+   crumple.play();
 }
 
 function open2(){
@@ -126,7 +153,7 @@ function open2(){
       document.querySelector("#gameOver").classList.add("visible")
       document.querySelector("#gameOverText").classList.add("visible")
       document.querySelector("#home").classList.add("visible")
-
+      loseG.play();
 
    }
  }
@@ -209,6 +236,8 @@ function mon(){
    document.querySelector("#gameOver").classList.add("visible")
    document.querySelector("#gameOverText").classList.add("visible")
    document.querySelector("#home").classList.add("visible")
+   loseG.play();
+
 }
 
 function goDoor(){
@@ -246,6 +275,7 @@ function right(){
    document.querySelector("#gameOver").classList.add("visible")
    document.querySelector("#gameOverText").classList.add("visible")
    document.querySelector("#home").classList.add("visible")
+   loseG.play();
 
 }
 
@@ -258,6 +288,8 @@ function closer(){
    document.querySelector("#gameOverZombi").classList.add("visible")
    document.querySelector("#gameOverText").classList.add("visible")
    document.querySelector("#home").classList.add("visible")
+   loseG.play();
+
 }
 
 function ignore(){
@@ -306,6 +338,8 @@ function blue(){
    document.querySelector("#gameOverBlue").classList.add("visible")
    document.querySelector("#gameOverText").classList.add("visible")
    document.querySelector("#home").classList.add("visible")
+   loseG.play();
+
 }
 function green(){
    document.querySelector("#red").classList.remove("visible")
@@ -318,6 +352,8 @@ function green(){
    document.querySelector("#gameOverGreen").classList.add("visible")
    document.querySelector("#gameOverText").classList.add("visible")
    document.querySelector("#home").classList.add("visible")
+   loseG.play();
+
 }
 function nextB(){
    document.querySelector("#welcome").classList.remove("visible")
@@ -335,6 +371,7 @@ function out1(){
 
    document.querySelector("#happyE").classList.add("visible")
    document.querySelector("#again").classList.add("visible")
+   winG.play();
 }
 
 function in1(){
@@ -345,6 +382,8 @@ function in1(){
    document.querySelector("#badE").classList.add("visible")
    document.querySelector("#gameOverText2").classList.add("visible")
    document.querySelector("#home").classList.add("visible")
+   loseG.play();
+
 }
 function again(){
    document.querySelector("#win").classList.remove("visible")
@@ -368,6 +407,4 @@ function home(){
    document.querySelector("#badE").classList.remove("visible")
 
 }
- bgm = new Audio("bgm.mp3");
- bgm.play();
-
+ 

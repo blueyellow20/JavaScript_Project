@@ -10,7 +10,6 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Fira+Code|Ubuntu+Mono|VT323&display=swap" rel="stylesheet">
     <audio id="audio" controls autoplay>
-        <source  src="bgm.mp3" type="audio/ogg">
         
     </audio>
     <style>
@@ -55,6 +54,12 @@
         <div class="invisible" id="welcome" style="width:600px; height:230px; z-index:2; position:absolute;"></div>
         <div class="invisible" id="lastDoor" style="width:600px; height:230px; z-index:2; position:absolute;"></div>
         <div class="invisible" id="win" style="width:600px; height:230px; z-index:2; position:absolute;"></div>
+        <div id="hintO">
+            <div class="invisible" id="getOut" style="color:white; font-family: 'New Tegomin', serif; text-align: center; margin-top:270px; z-index:2; position:relative;">I should get out!<br></div>
+            <div class="invisible" id="hintOut" style="color:white; font-family: 'New Tegomin', serif; text-align: center; margin-top:270px; z-index:2; position:relative;">(Solve the question on the paper to open the chest)</div>
+        </div>
+      
+
         <div  id="threeDoor">
             <div class="invisible" id="red" style="width:200px; height:300px; z-index:2; position:relative;"></div>
             <div class="invisible" id="blue" style="width:200px; height:300px; z-index:2; position:relative;"></div>
