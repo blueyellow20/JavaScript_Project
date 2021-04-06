@@ -61,6 +61,15 @@ function start() {
    document.querySelector("#open2").classList.add("visible")
    document.querySelector("#quiz1").classList.remove("visible")
    document.querySelector("#quiz1-1").classList.remove("visible")
+
+   document.querySelector("#mon").classList.remove("visible")
+   document.querySelector("#tue").classList.remove("visible")
+   document.querySelector("#wen").classList.remove("visible")
+   document.querySelector("#thr").classList.remove("visible")
+   document.querySelector("#fri").classList.remove("visible")
+   document.querySelector("#sat").classList.remove("visible")
+   document.querySelector("#sun").classList.remove("visible")
+   
  }
 
  function paper(){
@@ -70,6 +79,15 @@ function start() {
    document.querySelector("#open2").classList.remove("visible")
    document.querySelector("#quiz1").classList.add("visible")
    document.querySelector("#quiz1-1").classList.add("visible")
+
+   document.querySelector("#mon").classList.remove("visible")
+   document.querySelector("#tue").classList.remove("visible")
+   document.querySelector("#wen").classList.remove("visible")
+   document.querySelector("#thr").classList.remove("visible")
+   document.querySelector("#fri").classList.remove("visible")
+   document.querySelector("#sat").classList.remove("visible")
+   document.querySelector("#sun").classList.remove("visible")
+   
    
 }
 
@@ -152,6 +170,14 @@ function sun(){
    document.querySelector("#fri").classList.remove("visible")
    document.querySelector("#sat").classList.remove("visible")
    document.querySelector("#sun").classList.remove("visible")
+
+
+   document.querySelector("#safe").classList.remove("visible")
+   document.querySelector("#door").classList.remove("visible")
+   document.querySelector("#paper").classList.remove("visible")
+   document.querySelector("#story5-2").classList.remove("visible")
+   document.querySelector("#story5-3").classList.remove("visible")
+
 }
 
 function mon(){
@@ -166,6 +192,11 @@ function mon(){
 
    document.querySelector("#note").classList.remove("visible")
    document.querySelector("#door").classList.remove("visible")
+   document.querySelector("#safe").classList.remove("visible")
+   document.querySelector("#paper").classList.remove("visible")
+
+   document.querySelector("#story5-2").classList.remove("visible")
+   document.querySelector("#story5-3").classList.remove("visible")
 
    document.querySelector("#mon").classList.remove("visible")
    document.querySelector("#tue").classList.remove("visible")
@@ -220,6 +251,13 @@ function right(){
 
 function closer(){
 
+   document.querySelector("#dead").classList.remove("visible")
+   document.querySelector("#closer").classList.remove("visible")
+   document.querySelector("#ignore").classList.remove("visible")
+
+   document.querySelector("#gameOverZombi").classList.add("visible")
+   document.querySelector("#gameOverText").classList.add("visible")
+   document.querySelector("#home").classList.add("visible")
 }
 
 function ignore(){
@@ -256,6 +294,31 @@ function red(){
    document.querySelector("#nextB").classList.add("visible")
    
 }
+
+function blue(){
+   document.querySelector("#red").classList.remove("visible")
+   document.querySelector("#blue").classList.remove("visible")
+   document.querySelector("#green").classList.remove("visible")
+   document.querySelector("#redB").classList.remove("visible")
+   document.querySelector("#blueB").classList.remove("visible")
+   document.querySelector("#greenB").classList.remove("visible")
+
+   document.querySelector("#gameOverBlue").classList.add("visible")
+   document.querySelector("#gameOverText").classList.add("visible")
+   document.querySelector("#home").classList.add("visible")
+}
+function green(){
+   document.querySelector("#red").classList.remove("visible")
+   document.querySelector("#blue").classList.remove("visible")
+   document.querySelector("#green").classList.remove("visible")
+   document.querySelector("#redB").classList.remove("visible")
+   document.querySelector("#blueB").classList.remove("visible")
+   document.querySelector("#greenB").classList.remove("visible")
+
+   document.querySelector("#gameOverGreen").classList.add("visible")
+   document.querySelector("#gameOverText").classList.add("visible")
+   document.querySelector("#home").classList.add("visible")
+}
 function nextB(){
    document.querySelector("#welcome").classList.remove("visible")
    document.querySelector("#nextB").classList.remove("visible")
@@ -265,28 +328,45 @@ function nextB(){
    document.querySelector("#in1").classList.add("visible")
 }
 
-function leave(){
+function out1(){
    document.querySelector("#lastDoor").classList.remove("visible")
    document.querySelector("#out1").classList.remove("visible")
    document.querySelector("#in1").classList.remove("visible")
 
-   document.querySelector("#win").classList.add("visible")
+   document.querySelector("#happyE").classList.add("visible")
    document.querySelector("#again").classList.add("visible")
 }
 
+function in1(){
+   document.querySelector("#lastDoor").classList.remove("visible")
+   document.querySelector("#out1").classList.remove("visible")
+   document.querySelector("#in1").classList.remove("visible")
+
+   document.querySelector("#badE").classList.add("visible")
+   document.querySelector("#gameOverText2").classList.add("visible")
+   document.querySelector("#home").classList.add("visible")
+}
 function again(){
    document.querySelector("#win").classList.remove("visible")
    document.querySelector("#again").classList.remove("visible")
-
+   document.querySelector(".start").classList.remove("invisible")
+   document.querySelector("#storyOne").classList.remove("invisible")
+   document.querySelector("#happyE").classList.remove("visible")
   
 }
 
 function home(){
    document.querySelector("#gameOver").classList.remove("visible")
    document.querySelector("#gameOverText").classList.remove("visible")
+   document.querySelector("#gameOverText2").classList.remove("visible")
    document.querySelector("#home").classList.remove("visible")
    document.querySelector(".start").classList.remove("invisible")
    document.querySelector("#storyOne").classList.remove("invisible")
+   document.querySelector("#gameOverZombi").classList.remove("visible")
+   document.querySelector("#gameOverGreen").classList.remove("visible")
+   document.querySelector("#gameOverBlue").classList.remove("visible")
+   document.querySelector("#badE").classList.remove("visible")
+
 }
  bgm = new Audio("bgm.mp3");
  bgm.play();

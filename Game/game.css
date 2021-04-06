@@ -409,3 +409,56 @@
         font-size:35px;
         width: 800px;
     }
+    #gameOverText2{
+        font-size:35px;
+        width: 800px;
+    }
+    #gameOverZombi{
+        background-image: url("./image/zombi.jpg");
+        background-position: center;
+        background-size: cover;
+        height: auto;
+        margin-left:80px;
+        margin-top: 30px;
+        z-index: 2;
+    }
+
+    #gameOverGreen{
+        background-image: url("./image/greenD.jpg");
+        background-position: center;
+        background-size: cover;
+        height: auto;
+        margin-left:80px;
+        margin-top: 30px;
+        z-index: 2;
+    }
+
+    #gameOverBlue{
+        background-image: url("./image/blueD.jpg");
+        background-position: center;
+        background-size: cover;
+        height: auto;
+        margin-left:80px;
+        margin-top: 30px;
+        z-index: 2;
+    }
+
+    #happyE{
+        background-image: url("./image/out.jpg");
+        background-position: center;
+        background-size: cover;
+        height: auto;
+        margin-left:240px;
+        margin-top: 30px;
+        z-index: 2;
+    }
+
+    #badE{
+        background-image: url("./image/skeleton.jpg");
+        background-position: center;
+        background-size: cover;
+        height: auto;
+        margin-left:80px;
+        margin-top: 30px;
+        z-index: 2;
+    }
