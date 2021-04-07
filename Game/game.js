@@ -1,6 +1,6 @@
 var bgm = new Audio("bgm.mp3");
 bgm.play();
-
+muted="muted"
 var scream = new Audio("./sound/maleScream.wav");
 var safe = new Audio("./sound/chest.wav")
 var crumple = new Audio("./sound/crumple.wav");
