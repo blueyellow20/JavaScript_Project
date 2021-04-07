@@ -1,6 +1,4 @@
 var bgm = new Audio("bgm.mp3");
-bgm.play();
-muted="muted"
 var scream = new Audio("./sound/maleScream.wav");
 var safe = new Audio("./sound/chest.wav")
 var crumple = new Audio("./sound/crumple.wav");
@@ -14,8 +12,9 @@ function start() {
     document.querySelector("#storyOne").classList.add("invisible")
     document.querySelector("#storyTwo").classList.add("visible")
 
+    bgm.play();
 
-    bgm.pause();
+    
     setTimeout(function(){ 
        scream.play(); 
        document.querySelector("#next").classList.add("visible")
